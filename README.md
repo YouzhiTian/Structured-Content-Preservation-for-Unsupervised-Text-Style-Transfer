@@ -1,4 +1,4 @@
-# Sturctured-Content-Preservation-for-Unsupervised-Text-Style-Transfer
+# Sturctured Content Preservation for Unsupervised Text Style Transfer
 Authors: Youzhi Tian, Zhiting Hu, Zhou Yu
 
 NOTES:
