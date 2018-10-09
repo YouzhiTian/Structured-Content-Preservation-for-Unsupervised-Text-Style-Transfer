@@ -2,9 +2,9 @@ import argparse
 import collections
 from nltk import word_tokenize,pos_tag
 parser = argparse.ArgumentParser()
-parser.add_argument('-file_merge',default="./data/gender_data/train.merge",type=str,
+parser.add_argument('-file_merge',default="./data/yelp/train.merge",type=str,
                     help="""File to create vocab""")
-parser.add_argument('-file_vocab',default="./data/gender_data/vocab",type=str,
+parser.add_argument('-file_vocab',default="./data/yelp/vocab",type=str,
                     help="""File used to save vocab""")
 
 
