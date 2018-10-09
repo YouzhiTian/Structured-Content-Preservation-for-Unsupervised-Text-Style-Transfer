@@ -2,13 +2,13 @@ import argparse
 import torch
 parser = argparse.ArgumentParser()
 
-parser.add_argument('-file_ori_0', default="./data/gender_data/female_only.dev.en", type=str,
+parser.add_argument('-file_ori_0', default="./data/political_data/democratic_only.dev.en", type=str,
                     help="""File name""")
-parser.add_argument('-file_ori_1', default="./data/gender_data/male_only.dev.en", type=str,
+parser.add_argument('-file_ori_1', default="./data/political_data/republican_only.dev.en", type=str,
                     help="""File name""")
-parser.add_argument('-file_merge',default="./data/gender_data/dev.merge",type=str,
+parser.add_argument('-file_merge',default="./data/political_data/dev.merge",type=str,
                     help="""File merge""")
-parser.add_argument('-file_label',default="./data/gender_data/dev.labels",type=str,
+parser.add_argument('-file_label',default="./data/political_data/dev.labels",type=str,
                     help="""File label""")
 parser.add_argument('-if_shuffle',default=0,type=int,
                     help="""File label""")
