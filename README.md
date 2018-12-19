@@ -2,8 +2,7 @@
 Authors: Youzhi Tian, Zhiting Hu, Zhou Yu
 
 NOTES:
-* The paper is under review at ICLR 2019 https://openreview.net/pdf?id=S1lCbhAqKX.
-	* If you encounter any problems, please give comments on open review, or submit a pull request if you know the fix!
+* The link of the paper: https://arxiv.org/abs/1810.06526
 * This is research code meant to serve as a reference implementation. We do not recommend heavily extending or modifying this codebase for other purposes.
 
 
