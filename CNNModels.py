@@ -25,7 +25,8 @@ class CnnTextClassifier(nn.Module):
         x = torch.cat(xs, 2)            
         x = x.view(x.size(0), -1)       
         logits = self.fc(x)             
-
+        
+        #True accuracy
         probs = F.softmax(logits)       
         classes = torch.max(probs, 1)[1]
 
