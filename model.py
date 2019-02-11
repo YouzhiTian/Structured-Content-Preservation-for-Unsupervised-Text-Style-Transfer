@@ -14,8 +14,11 @@ class CtrlGenModel(nn.Module):
         self.softmax = F.log_softmax
         self.embedder = nn.Embedding(vocab_size, embed_size).cuda()
         self.embedder.load_state_dict({'weight': weights_matrix})
+        
+        #Classifier pretrained Embedding
         self.clas_embedder = nn.Embedding(vocab_size,embed_size).cuda()
         self.clas_embedder.load_state_dict({'weight': weights_matrix})
+        
         self.vocab_size = vocab_size
         self.vocab_tensor = torch.LongTensor([i for i in range(vocab_size)]).cuda()
         self.batch_size = batch_size
@@ -27,7 +30,10 @@ class CtrlGenModel(nn.Module):
         self.label_connector = nn.Sequential(nn.Linear(1,hidden_size),nn.Linear(hidden_size,self.dim_c)).cuda()
         self.connector = nn.Linear(700,hidden_size).cuda()
         self.decoder = BahdanauAttnDecoderRNN(hidden_size,embed_size,vocab_size,dropout_p=0.5).cuda()
+        
+        #Classifier
         self.classifier = CnnTextClassifier(num_filters = 128,vocab_size = vocab_size,emb_size = embed_size,num_classes = 2).cuda()
+        
         self.lm = nn.GRU(input_size = embed_size,hidden_size = hidden_size,dropout = 0.5,batch_first = True).cuda()
         self.lm_output = nn.Linear(hidden_size,vocab_size).cuda()
         self.lm_embedder = nn.Embedding(vocab_size,embed_size).cuda()
