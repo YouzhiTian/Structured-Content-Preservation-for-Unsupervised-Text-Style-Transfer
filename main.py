@@ -480,8 +480,9 @@ def main():
     vocab_size = len(word_to_id)
     print("Vocab size",len(word_to_id))
     
-    #Make the weight matrix.
+    #Make the weight matrix which will be used as pretrained embedding.
     weights_matrix = make_pretrain_embeddings(dic_glove,id_to_word,config.model['embedder']['dim'])  
+    
     #Glove used to embed the noun contents.
     glove = torch_vocab.GloVe(name='840B', dim=300)
     
