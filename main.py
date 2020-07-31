@@ -14,19 +14,19 @@ import pickle
 parser = argparse.ArgumentParser(description='main.py')
 
 
-parser.add_argument('-if_eval', default=True, type=bool,
+parser.add_argument('-if_eval', default=False, type=bool,
                     help="""If the result should be evaluated.""")
 parser.add_argument('-if_classifier',default=False,type=bool,
                     help="""If we can test the result of the generated text.""")
-parser.add_argument('-if_saveData',default=False,type=bool,
+parser.add_argument('-if_saveData',default=True,type=bool,
                     help="""If we need to save the data used.""")
 parser.add_argument('-file_save', default='./reproduce.txt', type=str,
                     help="""The name of the file which saved the result of the generated text.""")
-parser.add_argument('-checkpoint',default='./Checkpoint_3/checkpoint_3_step_400_acc_0.95.pt',type=str,
+parser.add_argument('-checkpoint',default='',type=str,
                     help="""The checkpoint of the model we trained before.""")
 parser.add_argument('-checkpoint_path',default='./Checkpoint_3/',type=str,
                     help="""The path of the checkpoint.""")
-parser.add_argument('-batch_size',default=1,type=int,
+parser.add_argument('-batch_size',default=128,type=int,
                     help="""Batch size.""")
 parser.add_argument('-pretrain',default=1,type=int,
                     help="""pretrained epoch before add class loss""")
